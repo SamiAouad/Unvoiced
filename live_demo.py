@@ -24,7 +24,7 @@ current_word = ""
 label_lines = [line.rstrip() for line in tf.io.gfile.GFile("training_set_labels.txt")]
 
 # Load trained model's graph
-with tf.io.gfile.GFile("trained_model_graph.pb", 'rb') as f:
+with tf.io.gfile.GFile("saved_model.pb", 'rb') as f:
     # Define a tensorflow graph
     graph_def = tf.compat.v1.GraphDef()
 
